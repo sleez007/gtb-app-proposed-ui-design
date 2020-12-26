@@ -7,4 +7,11 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="orange_900">#DE4A08</color>
+    <color name="orange_trans_900">#33DE4A08</color>
+    <color name="orange_700">#f48609</color>
+    <color name="orange_500">#f89109</color>
+
+    <color name="immersive_sys_ui">#33000000</color>
+    <color name="nav_bar">@color/immersive_sys_ui</color>
 </resources>
