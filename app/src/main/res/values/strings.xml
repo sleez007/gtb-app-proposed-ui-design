@@ -19,4 +19,12 @@
     <string name="quick_actions">Quick Actions</string>
     <string name="book_balance">Book Balance</string>
     <string name="latest_transaction">Latest Transaction</string>
+
+    <!--CATEGORY STRING-->
+    <string name="transfer">Transfer</string>
+    <string name="top_up">Mobile Top-up</string>
+    <string name="paybill">Pay bills</string>
+    <string name="sports">Sports/game</string>
+    <string name="nigeria">Nigeria</string>
+
 </resources>

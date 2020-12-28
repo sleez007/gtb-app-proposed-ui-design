@@ -1,222 +1,234 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <com.google.android.material.appbar.AppBarLayout
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        app:elevation="0dp"
-        android:layout_height="wrap_content">
-
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            app:menu="@menu/menu_home"
-            app:navigationIcon="@drawable/ic_outline_dehaze_24"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimary"/>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <androidx.core.widget.NestedScrollView
-        android:layout_width="match_parent"
-        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-        android:fillViewport="true"
         android:layout_height="match_parent">
-        <LinearLayout
+
+        <com.google.android.material.appbar.AppBarLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            app:elevation="0dp"
+            android:layout_height="wrap_content">
 
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/welcome_back_kingsley"
-                android:layout_margin="16dp"
-                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Subtitle1"/>
-
-            <com.google.android.material.card.MaterialCardView
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
                 android:layout_width="match_parent"
-                android:layout_margin="15dp"
-               app:cardBackgroundColor="@color/orange_900"
-                app:cardCornerRadius="10dp"
-                app:cardElevation="0dp"
-                android:layout_height="wrap_content">
+                app:menu="@menu/menu_home"
+                app:navigationIcon="@drawable/ic_outline_dehaze_24"
+                android:layout_height="wrap_content"
+                android:background="?attr/colorPrimary" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:fillViewport="true"
+            android:id="@+id/scroll_layout"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/welcome_back_kingsley"
+                    android:layout_margin="16dp"
+                    android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Subtitle1" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_margin="15dp"
+                    app:cardBackgroundColor="@color/orange_900"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    android:layout_height="wrap_content">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:scaleType="fitEnd"
+                            android:src="@drawable/arc_straight"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <ImageView
+                            android:id="@+id/imageView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:scaleType="center"
+                            android:src="@drawable/arc_shape"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="32dp"
+                            android:src="@drawable/master"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="16dp"
+                            android:layout_marginTop="16dp"
+                            android:text="@string/savings_account_balance"
+                            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption"
+                            android:textColor="#EEEEEE"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="@string/_2_500_000_00"
+                            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6"
+                            android:textColor="@color/white"
+                            app:layout_constraintStart_toStartOf="@+id/textView2"
+                            app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/_2_500_000_00"
+                            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body2"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="4dp"
+                            android:text="@string/book_balance"
+                            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption"
+                            android:textColor="#EEEEEE"
+                            app:layout_constraintBottom_toTopOf="@+id/textView4"
+                            app:layout_constraintStart_toStartOf="@+id/textView2" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="16dp"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/_5643_2451"
+                            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body2"
+                            android:textColor="#EEEEEE"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:id="@+id/textView6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:text="@string/_11_22"
+                            android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body2"
+                            android:textColor="@color/white"
+                            app:layout_constraintBottom_toTopOf="@+id/textView5"
+                            app:layout_constraintEnd_toEndOf="@+id/textView5" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/quick_actions"
+                    android:layout_margin="16dp"
+                    android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Subtitle2" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    android:orientation="horizontal"
+                    tools:layout_marginStart="8dp"
+                    android:id="@+id/category_recycler"
+                    tools:listitem="@layout/row_action"
+                    android:layout_height="wrap_content" />
+
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/top_arch">
 
-                    <ImageView
-                        android:id="@+id/imageView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentStart="true"
-                        android:scaleType="fitEnd"
-                        android:src="@drawable/arc_straight"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
 
-                    <ImageView
-                        android:id="@+id/imageView3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerInParent="true"
-                        android:scaleType="center"
-                        android:src="@drawable/arc_shape"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent" />
-
-                    <ImageView
-                        android:layout_width="80dp"
-                        android:layout_height="80dp"
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="100dp"
+                        android:layout_height="4dp"
                         android:layout_marginTop="16dp"
-                        android:layout_marginEnd="32dp"
-                        android:src="@drawable/master"
+                        android:background="#EEE"
                         app:layout_constraintEnd_toEndOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/textView2"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="16dp"
-                        android:layout_marginTop="16dp"
-                        android:text="@string/savings_account_balance"
-                        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption"
-                        android:textColor="#EEEEEE"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/textView3"
+                        android:id="@+id/materialTextView"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="@string/_2_500_000_00"
-                        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Headline6"
-                        android:textColor="@color/white"
-                        app:layout_constraintStart_toStartOf="@+id/textView2"
-                        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+                        android:layout_marginStart="16dp"
+                        android:layout_marginTop="24dp"
+                        android:text="@string/latest_transaction"
+                        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Subtitle2"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/view" />
 
                     <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/textView4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="@string/_2_500_000_00"
-                        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body2"
-                        android:textColor="@color/white"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintStart_toStartOf="@+id/textView2" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginBottom="4dp"
-                        android:text="@string/book_balance"
-                        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Caption"
-                        android:textColor="#EEEEEE"
-                        app:layout_constraintBottom_toTopOf="@+id/textView4"
-                        app:layout_constraintStart_toStartOf="@+id/textView2" />
-
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/textView5"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginEnd="16dp"
-                        android:layout_marginBottom="8dp"
-                        android:text="@string/_5643_2451"
-                        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body2"
-                        android:textColor="#EEEEEE"
-                        app:layout_constraintBottom_toBottomOf="parent"
-                        app:layout_constraintEnd_toEndOf="parent" />
+                        android:drawableEnd="@drawable/ic_outline_arrow_forward_24"
+                        android:text="View All"
+                        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Overline"
+                        app:layout_constraintBottom_toBottomOf="@+id/materialTextView"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/materialTextView" />
 
-                    <com.google.android.material.textview.MaterialTextView
-                        android:id="@+id/textView6"
-                        android:layout_width="wrap_content"
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/transaction_recycler"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="8dp"
-                        android:text="@string/_11_22"
-                        android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Body2"
-                        android:textColor="@color/white"
-                        app:layout_constraintBottom_toTopOf="@+id/textView5"
-                        app:layout_constraintEnd_toEndOf="@+id/textView5" />
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical"
+                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/materialTextView"
+                        tools:listitem="@layout/row_transaction" />
+
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
-            </com.google.android.material.card.MaterialCardView>
 
-            <com.google.android.material.textview.MaterialTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/quick_actions"
-                android:layout_margin="16dp"
-                android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Subtitle2"/>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:layout_width="match_parent"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                android:orientation="horizontal"
-                tools:layout_marginStart="8dp"
-                tools:listitem="@layout/row_action"
-                android:layout_height="wrap_content"/>
-
-            <androidx.constraintlayout.widget.ConstraintLayout
-                android:layout_width="match_parent"
-                android:background="@drawable/top_arch"
-                android:layout_marginTop="16dp"
-                android:layout_height="400dp">
-
-
-                <View
-                    android:id="@+id/view"
-                    android:layout_width="100dp"
-                    android:layout_height="4dp"
-                    android:layout_marginTop="16dp"
-                    android:background="#EEE"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:id="@+id/materialTextView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="16dp"
-                    android:layout_marginTop="24dp"
-                    android:text="@string/latest_transaction"
-                    android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Subtitle2"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/view" />
-
-                <com.google.android.material.textview.MaterialTextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="16dp"
-                    android:text="View All"
-                    android:drawableEnd="@drawable/ic_outline_arrow_forward_24"
-                    android:textAppearance="@style/TextAppearance.MdcTypographyStyles.Overline"
-                    app:layout_constraintBottom_toBottomOf="@+id/materialTextView"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/materialTextView" />
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="16dp"
-                    android:orientation="vertical"
-                    tools:listitem="@layout/row_transaction"
-                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
-
-
-            </androidx.constraintlayout.widget.ConstraintLayout>
-
-        </LinearLayout>
-    </androidx.core.widget.NestedScrollView>
-
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

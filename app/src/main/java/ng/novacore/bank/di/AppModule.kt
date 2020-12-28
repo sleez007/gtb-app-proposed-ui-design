@@ -2,6 +2,8 @@ package ng.novacore.bank.di
 
 import android.content.Context
 import androidx.room.Room
+import androidx.room.RoomDatabase
+import androidx.sqlite.db.SupportSQLiteDatabase
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -9,6 +11,7 @@ import dagger.hilt.InstallIn
 import dagger.hilt.android.components.ApplicationComponent
 import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.Dispatchers
+import ng.novacore.bank.data.FakeData
 import ng.novacore.bank.db.BankDB
 import ng.novacore.bank.repository.AppRepository
 import ng.novacore.bank.repository.AppRepositoryImpl
@@ -26,7 +29,7 @@ object AppModule {
     @Singleton
     @Provides
     fun provideDataBase(@ApplicationContext context: Context): BankDB {
-        return Room.databaseBuilder(context.applicationContext, BankDB::class.java,"bank_db.db").build()
+        return BankDB.provideDB(context)
     }
 }
 
